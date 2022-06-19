@@ -1,0 +1,56 @@
+%
+% Copyright © 2022 Peeter Joot.  All Rights Reserved.
+% Licenced as described in the file LICENSE under the root directory of this GIT repository.
+%
+%{
+\input{../latex/blogpost.tex}
+\renewcommand{\basename}{demo}
+%\renewcommand{\dirname}{notes/phy1520/}
+\renewcommand{\dirname}{notes/ece1228-electromagnetic-theory/}
+%\newcommand{\dateintitle}{}
+%\newcommand{\keywords}{}
+
+\input{../latex/peeter_prologue_print2.tex}
+
+\usepackage{peeters_layout_exercise}
+\usepackage{peeters_braket}
+\usepackage{peeters_figures}
+\usepackage{siunitx}
+\usepackage{verbatim}
+%\usepackage{mhchem} % \ce{}
+%\usepackage{macros_bm} % \bcM
+%\usepackage{macros_qed} % \qedmarker
+%\usepackage{txfonts} % \ointclockwise
+
+\beginArtNoToc
+\generatetitle{Demo}
+
+Given a two variable problem
+\begin{dmath}\label{eqn:demo:20}
+   x \Ba + y \Bb = \Bc,
+\end{dmath}
+we can wedge with \( \Ba \) or \( \Bb \) to remove dependencies on the other.  Example, wedging with \( \Ba \)
+\begin{dmath}\label{eqn:demo:40}
+   \lr{ \cancel{x \Ba} + y \Bb } \wedge \Ba = \Bc \wedge \Ba,
+\end{dmath}
+so we are left with
+\begin{dmath}\label{eqn:demo:60}
+   y \lr{ \Bb \wedge \Ba } = \Bc \wedge \Ba.
+\end{dmath}
+Now we have the solution for \( y \) if it exists
+\begin{dmath}\label{eqn:demo:80}
+   y = \frac{ \Bc \wedge \Ba }{ \Bb \wedge \Ba }.
+\end{dmath}
+Similarly, we can wedge \cref{eqn:demo:20} with \( \Bb \), and get
+\begin{dmath}\label{eqn:demo:100}
+   x \lr{ \Ba \wedge \Bb } = \Bc \wedge \Bb,
+\end{dmath}
+We get
+\begin{dmath}\label{eqn:demo:120}
+   x = \frac{ \Bc \wedge \Bb }{ \Ba \wedge \Bb }.
+\end{dmath}
+
+
+%}
+%\EndArticle
+\EndNoBibArticle
